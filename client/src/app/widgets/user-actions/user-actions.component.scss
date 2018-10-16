@@ -1,0 +1,29 @@
+@import 'variables';
+
+.step {
+  position: relative;
+  margin-top: 50px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $border-color;
+    border-radius: 50%;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: calc(50% + 15px);
+    top: -34px;
+    width: calc(100% - 30px);
+    height: 2px;
+    background: #90959a;
+  }
+
+  &:last-of-type:after {
+    content: none;
+  }
+}
