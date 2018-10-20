@@ -4,12 +4,21 @@
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
+  line-height: 18px;
   color: $font-default;
 }
 
 * {
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
+
+//.height {
+//  height: calc(100vh - 174px)
+//}
+//
+//.o-a {
+//  overflow-y: auto;
+//}
 
 // Font
 .font {
@@ -24,6 +33,22 @@ body {
   }
   &-bold {
     font-weight: 700;
+  }
+  &-14 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &-16 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  &-18 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  &-20 {
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 
@@ -233,6 +258,6 @@ hr {
 
 .hover {
   &-scale:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
 }
