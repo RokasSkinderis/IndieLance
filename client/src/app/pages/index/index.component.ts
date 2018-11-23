@@ -6,8 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  feed: boolean;
+  service: boolean;
 
-  constructor() { }
+  constructor() {
+    this.feed = true;
+    this.service = false;
+  }
+
+  showFeed() {
+    this.feed = true;
+  }
+
+  showService() {
+    this.service = true;
+  }
 
   ngOnInit() {
   }
