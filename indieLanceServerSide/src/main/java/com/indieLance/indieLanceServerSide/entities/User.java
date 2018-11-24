@@ -13,7 +13,6 @@ import java.util.List;
 @ToString @EqualsAndHashCode
 public class User{
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

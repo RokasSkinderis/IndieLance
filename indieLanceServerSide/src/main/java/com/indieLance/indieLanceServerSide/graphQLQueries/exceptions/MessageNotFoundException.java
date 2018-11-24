@@ -1,6 +1,5 @@
 package com.indieLance.indieLanceServerSide.graphQLQueries.exceptions;
 
-import com.indieLance.indieLanceServerSide.entities.User;
 import graphql.ErrorType;
 import graphql.GraphQLError;
 import graphql.language.SourceLocation;
@@ -9,17 +8,17 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-public class UserNotFoundException extends RuntimeException implements GraphQLError {
+public class MessageNotFoundException extends RuntimeException implements GraphQLError {
 
-    private Long userId;
+    private Long messageId;
 
-    public UserNotFoundException(Long userId) {
-        this.userId = userId;
+    public MessageNotFoundException(Long messageId) {
+        this.messageId = messageId;
     }
 
     @Override
     public String getMessage() {
-        return "User with ID " + userId + " could not be found";
+        return "Message with ID " + messageId + " could not be found";
     }
 
     @Override
@@ -34,6 +33,6 @@ public class UserNotFoundException extends RuntimeException implements GraphQLEr
 
     @Override
     public Map<String, Object> getExtensions() {
-        return Collections.singletonMap("userId", userId);
+        return Collections.singletonMap("messageId", messageId);
     }
 }
