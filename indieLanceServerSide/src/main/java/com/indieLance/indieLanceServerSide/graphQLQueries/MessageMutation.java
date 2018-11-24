@@ -10,7 +10,7 @@ public class MessageMutation implements GraphQLMutationResolver {
     @Autowired
     MessageRepository messageRepository;
 
-    Message newMessage(Message input){
+    /*Message newMessage(Message input){
         //input
-    }
+    }*/
 }
