@@ -1,0 +1,45 @@
+type User {
+    id: ID
+    name: String!
+    lastName: String!
+    email: String!
+    phone: String!
+    region: String!
+    sentMessages: [Message]
+    recievedMessages: [Message]
+}
+
+input UserInput{
+    id: ID
+    name: String!
+    lastName: String!
+    email: String!
+    phone: String!
+    region: String!
+}
+
+type Message {
+    id: ID!
+    messageContent: String!
+    sender: User!
+    reciever: User!
+    sentAt: Date
+}
+
+input MessageInput {
+    id: ID!
+    messageContent: String!
+    sender: User!
+    reciever: User!
+}
+
+type Query {
+    getUserById(id: ID!): User
+    getAllUsers: [User]
+    getConversation(user1Id: ID!, user2Id: ID!): [Message]
+}
+
+type Mutation {
+    newUser(input: UserInput!): User
+    updateUser(input: UserInput!): User
+}
