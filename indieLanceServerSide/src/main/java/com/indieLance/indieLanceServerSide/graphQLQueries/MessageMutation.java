@@ -11,6 +11,6 @@ public class MessageMutation implements GraphQLMutationResolver {
     MessageRepository messageRepository;
 
     Message newMessage(Message input){
-        input
+        //input
     }
 }
