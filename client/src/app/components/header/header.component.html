@@ -1,16 +1,29 @@
 <header class="m-b-10">
-    <nav class="flex flex-sb-c container">
-        <div class="f-1 m-10">
-            <a href="/"><img src="https://via.placeholder.com/50x50" width="50px" height="50px" alt="logo"></a>
-        </div>
-        <ul class="flex flex-sa-c color-w font-semi-bold f-1 m-10">
-            <li><a href="/">Home</a></li>
-            <li><a href="/offers">Offers</a></li>
-            <li>Notifications</li>
-            <li class="flex flex-col flex-c-c">
-                <a href="/profile"><img src="https://via.placeholder.com/30x30" width="30px" height="30px" alt="logo" class="circle"></a>
-                <a href="/profile">Rokas</a>
-            </li>
-        </ul>
-    </nav>
+  <nav class="flex flex-sb-c container">
+    <div class="f-1 m-10">
+      <a href="/"><img src="https://via.placeholder.com/50x50" width="50px" height="50px" alt="logo"></a>
+    </div>
+    <ul class="flex flex-sa-c color-w font-semi-bold f-1 m-10" *ngIf="loggedIn">
+      <li><a href="/">Home</a></li>
+      <li><a href="/offers">Offers</a></li>
+      <li>Notifications</li>
+      <li class="flex flex-col flex-c-c">
+        <a href="/profile"><img src="https://via.placeholder.com/30x30" width="30px" height="30px" alt="logo"
+                                class="circle"></a>
+        <a href="/profile">Rokas</a>
+      </li>
+    </ul>
+
+    <form class="flex flex-sa-c color-w font-semi-bold f-1 m-10" [formGroup]="loginForm" (ngSubmit)="login()" *ngIf="!loggedIn">
+      <label>
+        <input type="email" placeholder="email@example.com" formControlName="email">
+      </label>
+      <label>
+        <input type="password" placeholder="Password" formControlName="password">
+      </label>
+      <div>
+        <button type="submit" >Sign up</button>
+      </div>
+    </form>
+  </nav>
 </header>

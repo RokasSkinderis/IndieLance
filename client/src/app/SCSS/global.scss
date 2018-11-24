@@ -8,17 +8,27 @@ body {
   color: $font-default;
 }
 
-* {
+.trans {
   transition: all 0.2s ease-in;
 }
 
-//.height {
-//  height: calc(100vh - 174px)
-//}
-//
-//.o-a {
-//  overflow-y: auto;
-//}
+
+// Width
+.width {
+  &-400 {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  &-800 {
+    max-width: 800px;
+    margin: auto;
+  }
+  &-1000 {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
 
 // Font
 .font {
@@ -106,6 +116,12 @@ h5 {
   padding: 0 5px 0 5px;
 }
 
+.container-center {
+  max-height: calc(100vh - 50px);
+  max-width: 1440px;
+  margin: auto;
+}
+
 // Margin
 
 .m {
@@ -154,6 +170,11 @@ h5 {
   }
   &-r-10 {
     padding-right: 10px;
+  }
+
+  &-tb-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
@@ -260,4 +281,12 @@ hr {
   &-scale:hover {
     transform: scale(1.1);
   }
+}
+
+//Forms
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }

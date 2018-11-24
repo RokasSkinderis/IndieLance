@@ -1,3 +1,26 @@
-<p>
-  registration works!
-</p>
+<form class="flex flex-col flex-sb-c" [formGroup]="registerForm" (ngSubmit)="register()">
+  <h3>Register</h3>
+  <label>
+    <input type="text" placeholder="First name" formControlName="firstName">
+  </label>
+  <label>
+    <input type="text" placeholder="Last name" formControlName="lastName">
+  </label>
+  <label>
+    <input type="email" placeholder="email@example.com" formControlName="email">
+  </label>
+  <label>
+    <input type="password" placeholder="Password" formControlName="password">
+  </label>
+  <!--<label>-->
+    <!--<input type="password" placeholder="Confirm password" formControlName="confirmPassword">-->
+  <!--</label>-->
+
+  <p>
+    Form Status: {{ registerForm.valid }}
+  </p>
+
+  <div>
+    <button type="submit" >Sign up</button>
+  </div>
+</form>
