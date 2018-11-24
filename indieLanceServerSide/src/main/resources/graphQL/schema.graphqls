@@ -23,7 +23,6 @@ type Message {
     messageContent: String!
     sender: User!
     reciever: User!
-    sentAt: Date
 }
 
 input MessageInput {
