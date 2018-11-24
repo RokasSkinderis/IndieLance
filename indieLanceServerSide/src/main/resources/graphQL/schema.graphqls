@@ -2,6 +2,7 @@ type User {
     id: ID
     name: String!
     lastName: String!
+
     email: String!
     phone: String!
     region: String!
